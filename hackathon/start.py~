@@ -1,11 +1,6 @@
 #! /usr/bin/env python3
 #-*- coding: utf-8 -*-
 
-"""
-Script to parse PDF resumes, create a csv file containing info
-#hackyourstart - Python hacketon(19.-20.11.2016)
-"""
-
 import re
 import string
 import os
@@ -187,8 +182,8 @@ def write_csv(data, header, file_name):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Script to parse PDF resumes, create a csv file containing info')
-    parser.add_argument('path_to_cvs', help='Path to cvs')
+    parser = argparse.ArgumentParser(description='Script to parse PDF resumes, and create a csv file containing contact info')
+    parser.add_argument('path_to_cvs', help='Path to file with pdf which include cvs.')
     parser.add_argument('--output_file_name','-o',default = None, help='Name of output file')
 
     args = parser.parse_args()
